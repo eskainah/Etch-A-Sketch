@@ -5,34 +5,37 @@ function createGrid(size) {
       const cols = document.createElement('div');
       cols.className = 'cols';
   
-      for (let j = 0; j < size; j++) {
+      for (let j = 0; j < size; j++){
         const rows = document.createElement('div');
         rows.className = 'rows';
 
+        rows.addEventListener('mouseover', () => {
+            rows.classList.add('autoColor')
+        })
+
         cols.appendChild(rows);
-      }
-            content.appendChild(cols);
+        }
+        content.appendChild(cols);
     }
   }
-  window.onload = function() {
-    createGrid(50);
+    window.onload = function() {
+    createGrid(60);
   };
+
+function randomColor() {
+    let R = Math.floor(Math.random() * 256);
+    let G = Math.floor(Math.random() * 256);
+    let B = Math.floor(Math.random() * 256);
+
+    let color = "rgb(" + R + "," + G + "," + B + ")";
+    return color;
+}
+
  /* 
   function makeGrid(size) {
 
     let divContainer = document.querySelector("#div-container");
     let checkBox = document.querySelector("#myCheck");
-
-    console.log(divContainer.id)
-    
-    divContainer.innerHTML = ""
-    for (let i = 0; i < size; i++) {
-        let column = document.createElement("div");
-        column.classList.add("column")
-
-        for (let j = 0; j < size; j++) {
-            let row = document.createElement("div");
-            row.classList.add("row");
 
             row.addEventListener("mouseover", () => {
                 if(checkBox.checked) {
@@ -40,12 +43,6 @@ function createGrid(size) {
                 } else {
                     row.classList.add("colored");
                 }
-            })
-            column.appendChild(row);
-        }
-        divContainer.appendChild(column);
-        
-    }
 }
 
 function startGame() {
@@ -58,11 +55,4 @@ function startGame() {
     }
 }
 
-function randomColor() {
-    let rndR = Math.floor(Math.random() * 256);
-    let rndG = Math.floor(Math.random() * 256);
-    let rndB = Math.floor(Math.random() * 256);
-
-    let color = "rgb(" + rndR + "," + rndG + "," + rndB + ")";
-    return color;
-} */
+ */
