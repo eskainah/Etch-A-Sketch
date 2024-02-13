@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>ETCH-A-SKETCH</title>
 </head>
 <body>
     <div class="container">
-        <div class="ctrls"></div>
-        <div class="content">
-
+        <div class="ctrls">
+            <span>
+                <p>
+                    Please enter the size of your desire pad.
+                    It should not be greater then 100 and 
+                    select a color.
+                </p>
+                <input type="radio" name="color"><label for="White">White</label> <br>
+                <input type="radio" name="color"><label for="">Blue</label> <br>
+                <input type="radio" name="color"><label for="">Random Color</label>
+            </span>
+            <input type="number" id="size" placeholder="Enter Size">
+            <button>SET SIZE</button>
         </div>
+        <div class="content"></div>
     </div>
 </body>
 </html>
