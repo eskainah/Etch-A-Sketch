@@ -10,19 +10,26 @@
 <body>
     <div class="container">
         <div class="ctrls">
-            <span>
-                <p>
-                    Please enter the size of your desire pad.
-                    It should not be greater then 100 and 
-                    select a color.
-                </p>
-                <input type="radio" name="color"><label for="White">White</label> <br>
-                <input type="radio" name="color"><label for="">Blue</label> <br>
-                <input type="radio" name="color"><label for="">Random Color</label>
-            </span>
-            <input type="number" id="size" placeholder="Enter Size">
-            <button>SET SIZE</button>
+            <p class="note">
+                Please enter the size of your desire pad.
+                Use value from 0 - 100 and 
+                select a color.
+            </p>
+
+            <div class="colorCtrl">
+                <span><input type="radio" name="color" id="white"><label for="white">White</label></span>
+                <span><input type="radio" name="color" id="black"><label for="black">Black</label></span>
+                <span><input type="radio" name="color" id="randomColor"><label for="randomColor">Random Color</label></span>
+            </div>
+
+            <div class="input">
+            <input type="text" id="gridSize" name="gridSize" placeholder="Enter Size">
+            <button onclick="start()">SET SIZE</button>
+            </div>
+            
+            <P class="msg"></P>  
         </div>
+
         <div class="content"></div>
     </div>
 </body>
