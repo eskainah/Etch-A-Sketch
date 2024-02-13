@@ -58,10 +58,6 @@ body{
     flex: 1;
     border: 1px solid rgba(209, 208, 208, 0.644);
 }
-.autoColor{
-/*     background-color: rgb(219, 218, 217);
- */    background-color: rgb(13, 13, 14);
-}
 
 @media (min-width: 620px) {
     .container{
