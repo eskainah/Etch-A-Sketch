@@ -1,7 +1,6 @@
 *,::after, ::before{
     box-sizing: border-box;
 }
-
 body{
     margin: 0;   
 }
@@ -9,19 +8,49 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;
-    background-color: rgb(0, 6, 8);
+    background-color: rgba(0, 6, 8, 0.541);
 }
 .ctrls{
     background-color: gray;
     width: 100%;
     height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span, #size, button{
+        width: 75%;
+        margin: 0 auto;
+    }
+    #size{
+        margin-top: 5px;
+    }
 }
+
 .content{
     width: 90%;
     height: 70vh;
-    border: 1px solid beige;
+    border: 5px solid rgb(73, 72, 72);
     margin: auto;
+    display: flex;
 }
+
+.cols {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+.rows {
+    display: flex;
+    flex: 1;
+    border: 1px solid rgba(209, 208, 208, 0.644);
+}
+.autoColor{
+/*     background-color: rgb(219, 218, 217);
+ */    background-color: rgb(13, 13, 14);
+}
+
 @media (min-width: 620px) {
     .container{
         flex-direction: row;
@@ -35,3 +64,41 @@ body{
         height: 90vh;
     }
 }
+
+ /* 
+.colored {
+    background-color: cadetblue;
+}
+
+#start-btn {
+    border: 2px solid cadetblue;
+    font-size: 24px;
+    background-color: #E4DCCF;
+    border-radius: 7px;
+    padding: 6px 28px;
+    color: cadetblue;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#start-btn:hover{
+    background-color: cadetblue;
+    color: #E4DCCF;
+    border: 2px solid cadetblue;
+}
+
+#checkbox-container {
+    border: 2px solid cadetblue;
+    font-size: 24px;
+    background-color: #E4DCCF;
+    border-radius: 7px;
+    padding: 6px 28px;
+    color: cadetblue;
+    cursor: pointer;
+}
+
+#btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
