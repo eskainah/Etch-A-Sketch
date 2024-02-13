@@ -1,8 +1,9 @@
-const content = document.querySelector('.content');
 function createGrid(size) {
+    const content = document.querySelector('.content');
+    content.innerHTML = ''; //REMOVE ALL EXISTING CHILD ELEMENTS
     const rColor = document.querySelector('#randomColor');
     const white = document.querySelector('#white');
-    const blue = document.querySelector('#blue');
+    const black = document.querySelector('#black');
 
     for (let i = 0; i < size; i++) {
         const cols = document.createElement('div');
@@ -20,7 +21,7 @@ function createGrid(size) {
                 }
             })
 
-            blue.addEventListener('change', function (event) {
+            black.addEventListener('change', function (event) {
                 if (event.target.checked) {
                     rows.addEventListener('mouseover', () => {
                         rows.style.backgroundColor = 'black';
@@ -41,9 +42,6 @@ function createGrid(size) {
         content.appendChild(cols);
     }
 }
-window.onload = function () {
-    createGrid(70);
-};
 
 function randomColor() {
     let R = Math.floor(Math.random() * 256);
@@ -53,20 +51,18 @@ function randomColor() {
     let color = "rgb(" + R + "," + G + "," + B + ")";
     return color;
 }
-/* 
-  function makeGrid(size) {
 
-    let divContainer = document.querySelector("#div-container");
-    let checkBox = document.querySelector("#myCheck");
-}
+function start(){
+    let size;
+    const gridSize = document.querySelector('#gridSize');
+    const msg = document.querySelector('.msg');
+    size = gridSize.value;
+    
+    if(isNaN(size)){msg.textContent = "you enter a letter"}
+    else if(size > 100) {msg.textContent = "The value enter is above 100"}
+    else if (size === ""){msg.textContent = "Please enter a value"}
+    else{createGrid(size)}
 
-function startGame() {
-    let size = prompt("choose the number of squares per side (max 100)");
-    if(size > 100) {
-        alert("you need to enter a value bigger than 0 smaller than 100")
-    }
-    if(size !== null && size <= 100) {
-        makeGrid(size);
-    }
+    document.querySelector('#gridSize').value = ""
 }
- */
+start();
