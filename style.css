@@ -17,12 +17,24 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: rgba(10, 8, 8, 0.863);
     span, #size, button{
         width: 75%;
         margin: 0 auto;
     }
     #size{
-        margin-top: 5px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    button{
+        background-color: rgb(59, 1, 1);
+        border: none;
+        color: #fff;
+        padding: 3px;
+        font-weight: bold;
+    }
+    button:hover{
+        background-color:rgba(59, 1, 1, 0.842);
     }
 }
 
